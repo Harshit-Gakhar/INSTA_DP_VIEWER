@@ -2,9 +2,9 @@
 A Python 3 based script, that downloads and opens the Instagram DP(Display Picture) of the user with provided username
 
 # How To Use?
-This application is designed to run on python 3, it uses some libraries which you should have intalled on your PC
+This application is designed to run on python 3, it uses some packages which you should have intalled on your PC
 
-The Libraries are:
+The packages are:
 Requests: to send requests to webpages
 
 To install these, refer to these links:
