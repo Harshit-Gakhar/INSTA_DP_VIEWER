@@ -1,5 +1,5 @@
 # INSTA_DP_VIEWER
-A Python 3 based script, that downloads and opens the DP(Display Picture) of the user with provided username
+A Python 3 based script, that downloads and opens the Instagram DP(Display Picture) of the user with provided username
 
 # How To Use?
 This application is designed to run on python 3, it uses some libraries which you should have intalled on your PC
@@ -12,3 +12,5 @@ To install these, refer to these links:
 
 # Additional Details
 It downloads the images to the directory where this file is present
+
+
