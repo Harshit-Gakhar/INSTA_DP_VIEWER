@@ -5,10 +5,10 @@ import subprocess
 import sys
 #Author: Harshit-Gakhar
 un=input("Enter User Name: ")                                               #asks user to enter username
-sourceCode = str(requests.get('https://www.instagram.com/'+un+"/").text)    #gets the source code of the webpage of given user 
+sourceCode = str(requests.get(f'https://www.instagram.com/{un}/').text)    #gets the source code of the webpage of given user 
 date = datetime.datetime.now()                                              #gets date to be saved in filename
-time=str(date.day)+"-"+ str(date.month) + "-" +str(date.year)               #time, as string, in readble form
-filename = un + " ({})".format(time) + ".jpg"                               #filename is the final name of file
+time=f"{date.day}-{date.month}-{date.year}"               #time, as string, in readble form
+filename = f"{un} ({time}).jpg"                               #filename is the final name of file
 left=sourceCode.find("pic_url_hd")+13                                       #left and right are the indices in source code, which has url of DP
 right=sourceCode.find("requested_by_viewer")-3
 hdurl=sourceCode[left:right]                                                #hdurl is the url of the DP 
