@@ -1,6 +1,8 @@
 import requests
 import datetime
 import os
+import subprocess
+import sys
 #Author: Harshit-Gakhar
 un=input("Enter User Name: ")                                               #asks user to enter username
 sourceCode = str(requests.get('https://www.instagram.com/'+un+"/").text)    #gets the source code of the webpage of given user 
@@ -14,5 +16,9 @@ response=requests.get(hdurl)                                                #rep
 f = open(filename,'wb')
 f.write(response.content)                                                   #writing image in a image file called filename
 f.close()
-os.startfile(filename)                                                      #to open the image
+if sys.platform == "win32":                                     
+        os.startfile(filename)                                              #to open the image on Windows
+else:
+    opener ="open" if sys.platform == "darwin" else "xdg-open"  
+    subprocess.call([opener, filename])                                     #to open the image on Mac&Linux
 
